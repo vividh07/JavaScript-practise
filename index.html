@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body >
+    <script>
+
+      let ID, NAME, ENGLISH, MATHS, HINDI, TOTAL, AVERAGE, STATUS, GRADE;
+      ID = prompt("Enter ID");
+      NAME = prompt("Enter Name");
+      ENGLISH = parseInt(prompt("Enter English Marks"));
+      if (ENGLISH > 100) 
+    {
+      alert("Marks should be less than or equal to 100 for English");
+      ENGLISH = parseInt(prompt("Enter English Marks"));
+    }
+   
+
+      MATHS = parseInt(prompt("Enter Maths Marks"));
+      if (MATHS > 100) 
+    {
+      alert("Marks should be less than or equal to 100 for Maths");
+      MATHS = parseInt(prompt("Enter MATHS Marks"));
+    }
+
+      HINDI = parseInt(prompt("Enter hindi Marks"));
+      if (HINDI > 100)
+    {
+          HINDI = parseInt(prompt("Enter Hindi Marks"));
+          alert("Marks should be less than or equal to 100 for Hindi");
+    }
+
+      TOTAL = ENGLISH + MATHS + HINDI;
+      AVERAGE = (TOTAL / 3).toFixed(2);
+      STATUS = AVERAGE >= 30 ? "PASS" : "FAIL";
+      GRADE =AVERAGE >= 95
+        ? "A*"
+        : AVERAGE >= 90
+        ? "A"
+        : AVERAGE >= 85
+        ? "B*"
+        : AVERAGE >= 80
+        ? "B"
+        : AVERAGE >= 70
+        ? "C*"
+        : AVERAGE >= 60
+        ? "C"
+        : AVERAGE >= 50
+        ? "D"
+        : AVERAGE >= 40
+        ? "E"
+        : "BETTER LUCK NEXT TIME :)";
+
+        
+
+          document.write(` <table  width="100%" border="1" cellpadding="20" cellspacing="0" >
+        <thead >
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ENGLISH</th>
+                <th>MATHS</th>
+                <th>HINDI</th>
+                <th>TOTAL</th>
+                <th>AVERAGE</th>
+                <th>STATUS</th>
+                <th>GRADE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>${NAME}</td>
+                <td>${ID}</td>
+                <td style="background-color: ${ENGLISH < 40 ? 'red' : ''}">${ENGLISH}</td>
+                <td styel="background-color: ${MATHS < 40 ? 'red' : ''}">${MATHS}</td>
+                <td style="background-color: ${HINDI < 40 ? 'red' : ''}">${HINDI}</td>
+                <td style="background-color: ${TOTAL < 90 ? 'red' : ''}">${TOTAL}</td>
+                <td>${AVERAGE}</td>
+                <td style="background-color: ${STATUS === 'PASS' ? 'green' : 'red'}">${STATUS}</td>
+                <td>${GRADE}</td>
+            </tr>
+        </tbody>
+    </table>`);
+
+
+    </script>
+  </body>
+</html>
