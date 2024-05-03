@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let date,month,year;
+        date = parseInt(prompt("Enter the date"))
+        if(date < 1 || date > 31 )
+        {
+            alert("enter a valid date")
+            date = parseInt(prompt("Enter the date"))
+        }
+
+        month = parseInt(prompt("enter the month"))
+        if( month < 1 || month > 12)
+        {
+            alert("enter a valid month")
+            month = parseInt(prompt("Enter the month"))
+        }
+    
+        year = parseInt(prompt("Enter the year"))
+         if( year < 1000 || year > 9999)
+         {
+            alert("enter a valid year")
+            year = parseInt(prompt("Enter the year"))
+         }
+
+         var n = (date.toString())
+         sum =0;
+         for(var i of n)
+         {
+            sum=sum+parseInt(i);  
+         }
+       console.log(sum);
+
+       var m = (month.toString())
+       sum1 = 0;
+       for(var i of m)
+       {
+        sum1 = sum1+parseInt(i);
+       }
+      console.log(sum1);
+
+       var y = (year.toString())
+       sum2 = 0;
+       for(var i of y)
+       {
+        sum2 = sum2+parseInt(i);
+       }
+       console.log(sum2);
+       
+     var sum3 = sum+sum1+sum2;
+
+     var s = (sum3.toString())
+     var a=0;
+     for(var i of s)
+     {
+        a = a + parseInt(i);
+     }
+     console.log(a);
+    </script>
+</body>
+</html>
